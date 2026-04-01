@@ -1,0 +1,30 @@
+[
+    {
+        "UpdateStageName": "Ensure Linux Config Directory",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/Linux"
+    },
+    {
+        "UpdateStageName": "Write DedicatedServer.ini",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cfg='{{$FullBaseDir}}RSDragonwilds/Saved/Config/Linux/DedicatedServer.ini'; touch \\\"$cfg\\\"; tmp=$(mktemp); grep -Ev '^(OwnerId|ServerName|DefaultWorldName|AdminPassword|WorldPassword)=' \\\"$cfg\\\" > \\\"$tmp\\\" || true; mv \\\"$tmp\\\" \\\"$cfg\\\"; printf 'OwnerId={{OwnerId}}\\nServerName={{ServerName}}\\nDefaultWorldName={{DefaultWorldName}}\\nAdminPassword={{AdminPassword}}\\n' >> \\\"$cfg\\\"; if [ -n \\\"{{WorldPassword}}\\\" ]; then printf 'WorldPassword={{WorldPassword}}\\n' >> \\\"$cfg\\\"; fi\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Ensure Windows Config Directory",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/WindowsServer"
+    },
+    {
+        "UpdateStageName": "Write DedicatedServer.ini",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$cfg='{{$FullBaseDir}}RSDragonwilds/Saved/Config/WindowsServer/DedicatedServer.ini'; if (-not (Test-Path $cfg)) { New-Item -ItemType File -Path $cfg -Force *> $null }; $content = @(); if (Test-Path $cfg) { $content = Get-Content $cfg | Where-Object { $_ -notmatch '^(OwnerId|ServerName|DefaultWorldName|AdminPassword|WorldPassword)=' } }; $content += 'OwnerId={{OwnerId}}'; $content += 'ServerName={{ServerName}}'; $content += 'DefaultWorldName={{DefaultWorldName}}'; $content += 'AdminPassword={{AdminPassword}}'; if (-not [string]::IsNullOrWhiteSpace('{{WorldPassword}}')) { $content += 'WorldPassword={{WorldPassword}}' }; Set-Content -Path $cfg -Value $content -Encoding ASCII\"",
+        "SkipOnFailure": false
+    }
+]
