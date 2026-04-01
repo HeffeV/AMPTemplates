@@ -5,9 +5,9 @@
         "Subcategory": "Server:dns:1",
         "Description": "Required. Your RuneScape: Dragonwilds Player ID from the in-game Settings menu. The server will not start without it.",
         "Keywords": "owner,id,player,id,ownerid",
-        "FieldName": "OwnerID",
+        "FieldName": "OwnerId",
         "InputType": "text",
-        "ParamFieldName": "OwnerID",
+        "ParamFieldName": "OwnerId",
         "IncludeInCommandLine": false,
         "DefaultValue": "",
         "EnumValues": {}
