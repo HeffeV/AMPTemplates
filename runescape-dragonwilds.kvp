@@ -5,7 +5,7 @@ Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
 Meta.Author=Heffe
 Meta.URL=https://dragonwilds.runescape.com/
-Meta.DisplayImageSource=steam:1374490
+Meta.DisplayImageSource=url:https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1374490/f1137349364729084d213678016b3ce6d2d548b3/page_bg_raw.jpg?t=1774967430
 Meta.EndpointURIFormat=
 Meta.ConfigManifest=runescape-dragonwildsconfig.json
 Meta.MetaConfigManifest=
