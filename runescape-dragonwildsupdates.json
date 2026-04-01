@@ -1,0 +1,34 @@
+[
+    {
+        "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "4019830",
+        "UpdateSourceArgs": "1374490",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Make Linux Launcher Executable",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullBaseDir}}RSDragonwildsServer.sh",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Create Windows Config Directory",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/WindowsServer",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Copy Default Config To WindowsServer",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "CopyFilePath",
+        "UpdateSourceData": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/WindowsServer/DedicatedServer.ini",
+        "UpdateSourceArgs": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/Linux/DedicatedServer.ini",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": true
+    }
+]
