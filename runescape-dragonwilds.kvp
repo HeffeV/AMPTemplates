@@ -29,11 +29,11 @@ Meta.ImportableExtensions=[".ini"]
 Meta.AppIsMultiIPAware=True
 App.DisplayName=RuneScape: Dragonwilds
 App.RootDir=./runescape-dragonwilds/
-App.BaseDirectory=./runescape-dragonwilds/
+App.BaseDirectory=./runescape-dragonwilds/4019830/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=RSDragonwilds.exe
-App.ExecutableLinux=RSDragonwildsServer.sh
-App.WorkingDir=
+App.ExecutableWin=4019830\RSDragonwilds.exe
+App.ExecutableLinux=4019830/RSDragonwildsServer.sh
+App.WorkingDir=4019830
 App.LinuxCommandLineArgs=-log -NewConsole
 App.WindowsCommandLineArgs=-log -NewConsole
 App.CommandLineArgs={{$PlatformArgs}} -port={{$GamePort}} -multihome={{$ApplicationIPBinding}} {{$FormattedArgs}} {{CustomArgs}}
