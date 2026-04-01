@@ -1,7 +1,7 @@
 [
     {
         "DisplayName": "Owner ID",
-        "Category": "RuneScape: Dragonwilds:stadia_controller",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Required. Your RuneScape: Dragonwilds Player ID from the in-game Settings menu. The server will not start without it.",
         "Keywords": "owner,id,player,id,ownerid",
@@ -14,7 +14,7 @@
     },
     {
         "DisplayName": "Server Name",
-        "Category": "RuneScape: Dragonwilds:stadia_controller",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Required. Sets the server name shown in the in-game browser.",
         "Keywords": "server,name,servername",
@@ -27,7 +27,7 @@
     },
     {
         "DisplayName": "Default World Name",
-        "Category": "RuneScape: Dragonwilds:stadia_controller",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Required. Used when the dedicated server creates its default world.",
         "Keywords": "default,world,name,worldname",
@@ -40,7 +40,7 @@
     },
     {
         "DisplayName": "Admin Password",
-        "Category": "RuneScape: Dragonwilds:stadia_controller",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Required. Grants access to the in-game Server Management tab.",
         "Keywords": "admin,password,adminpassword",
@@ -53,7 +53,7 @@
     },
     {
         "DisplayName": "World Password",
-        "Category": "RuneScape: Dragonwilds:stadia_controller",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Optional. Overrides any password stored in the world save.",
         "Keywords": "world,password,join,password,worldpassword",
@@ -66,7 +66,7 @@
     },
     {
         "DisplayName": "World Saves",
-        "Category": "RuneScape: Dragonwilds:stadia_controller",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
         "Subcategory": "Gameplay:joystick:2",
         "Description": "The server loads the newest .sav file from RSDragonwilds/Saved/Savegames. To use a custom difficulty or imported world, stop the server and replace the save files in that directory.",
         "Keywords": "save,world,difficulty,custom,import",
@@ -78,7 +78,7 @@
     },
     {
         "DisplayName": "Additional Command Line Arguments",
-        "Category": "RuneScape: Dragonwilds:stadia_controller",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Extra launch arguments not otherwise managed by AMP. Verified arguments include -port and -multihome.",
         "Keywords": "custom,args,launch,command,line,parameters",
